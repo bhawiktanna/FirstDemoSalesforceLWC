@@ -1,0 +1,53 @@
+<template>
+    <!-- <p>Welcome to LWC....!</p>
+    <div class="slds-card slds-has-bottom-magne">
+        <div class="slds-p-around_medium">
+            <div class="slds-text-heading_large">
+            	<div class="slds-text-align_center">
+                    Contact's Management App
+                </div>
+            </div>
+        </div>
+    </div>
+    <lightning-input type="text" value={empId} label="Enter the ID" onchange={idChanged}></lightning-input>
+    <lightning-input type="text" value={empName} label="Enter the Name" onchange={nameChanged}></lightning-input>
+    <lightning-input type="number" value={empSal} label="Enter the Salary" onchange={salChanged}></lightning-input>
+    <lightning-button label="Add Employee" onclick={addEmployee}></lightning-button>
+    <br/>
+
+    <div class="slds-p-around-small">
+        <div class="slds-grid slds-wrap"> 
+            
+    <template for:each={employeeList} for:item="emp" for:index="index">
+        <div key = {unique} class="slds-col slds-size_1-of-3 slds-p-around-small">
+        <lightning-card>		
+            Employee Name : {emp.empName}
+            <br/>Employee Salary : {emp.empSal}
+            <p slot="title">Employee ID : {emp.empId}</p>
+            <br/>
+            <lightning-button variant="destructive"  key={emp} value={index} label="Delete" onclick={delEmp} ></lightning-button>
+            &nbsp;
+            <lightning-button variant="brand" key={emp} value={index} label="Update" onclick={updEmp} ></lightning-button>
+        </lightning-card>    
+        </div>        
+    </template>
+    </div>
+    </div>
+    <div if:true={showUpd}>
+        <lightning-input type="text" value={updId} label="Enter the ID" onchange={updIdChanged}></lightning-input>
+        <lightning-input type="text" value={updName} label="Enter the Name" onchange={updNameChanged}></lightning-input>
+        <lightning-input type="text" value={updSal} label="Enter the Salary" onchange={updSalChanged}></lightning-input>
+        <lightning-button variant="success" label="Update" onclick={updEmployee} ></lightning-button>
+    </div>
+    <pre>
+        Employee ID is {empId}
+        Employee Name is {empName}
+        Employee Salary is {empSal}
+    </pre> -->
+    <!-- Calling another component-->
+    <lightning-input value={empSal} onchange={salChanged}></lightning-input>
+    <button onclick={newfun1}>Calculate Salary</button>
+    <div if:true={showChlid}>
+    <c-child-list sal ={empSal} temp={empId}></c-child-list>
+    </div>
+</template>
